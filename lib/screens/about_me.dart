@@ -39,7 +39,7 @@ class _About_MeState extends State<About_Me> {
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.home),
           onPressed: () {
-            Navigator.push(
+            Navigator.pop(
               context,
               MaterialPageRoute(
                 builder: (context) => const HomScreen(),
