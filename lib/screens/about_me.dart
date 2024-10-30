@@ -13,39 +13,39 @@ class About_Me extends StatefulWidget {
 class _About_MeState extends State<About_Me> {
   @override
   Widget build(BuildContext context) {
-    // INSERT CODE HERE!!!!
-    // Hint: You need to use the following widgets
-    // DefaultTabController, TabBar, Tab and TabBarView
     return Scaffold(
-      body: const DefaultTabController(
+      body: DefaultTabController(
         length: 2,
         child: Column(
           children: [
-            TabBar(
+            const TabBar(
               tabs: [
                 Tab(icon: Icon(Icons.contacts)),
                 Tab(icon: Icon(Icons.settings)),
               ],
             ),
-            Expanded(
-              child: TabBarView(children: [
-                TabWidget1(),
-                TabWidget2(),
-              ]),
-            )
+            const Expanded(
+              child: TabBarView(
+                children: [
+                  TabWidget1(),
+                  TabWidget2(),
+                ],
+              ),
+            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.home),
-          onPressed: () {
-            Navigator.pop(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const HomScreen(),
-              ),
-            );
-          }),
+        child: const Icon(Icons.home),
+        onPressed: () {
+          Navigator.pop(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const HomScreen(),
+            ),
+          );
+        },
+      ),
     );
   }
 }
